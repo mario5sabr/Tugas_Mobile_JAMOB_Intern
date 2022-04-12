@@ -10,6 +10,7 @@ class SignInSc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: <Widget>[
           Expanded(
@@ -22,6 +23,12 @@ class SignInSc extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                 ),
               ),
+              // child: SingleChildScrollView(
+              //   padding: EdgeInsets.symmetric(
+              //     horizontal: 25,
+              //     vertical: 120
+              //   ),
+              // ),
             ),
           ),
           Expanded(
