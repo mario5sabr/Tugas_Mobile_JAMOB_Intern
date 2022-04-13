@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:internmobile/constant.dart';
 import 'package:internmobile/main.dart';
 import 'package:internmobile/signup/signupsc.dart';
+import 'package:internmobile/src/home/homeSC.dart';
 
 // ignore: use_key_in_widget_constructors
 class SignInSc extends StatelessWidget {
@@ -142,7 +143,7 @@ class SignInSc extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => MyApp(),
+                                builder: (context) => const HomeSC(),
                               ),
                             );
                           },
