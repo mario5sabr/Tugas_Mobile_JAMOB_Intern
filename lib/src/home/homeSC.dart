@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 
@@ -9,6 +11,16 @@ class HomeSC extends StatefulWidget {
 }
 
 class _HomeSCState extends State<HomeSC> {
+  List todos = List.empty();
+  String title = "";
+  String description = "";
+
+  @override
+  void initState() {
+    super.initState();
+    todos = ["Hello", "Hey There"];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,9 +133,10 @@ class _HomeSCState extends State<HomeSC> {
                       SizedBox(
                         height: 130,
                         child: ListView.builder(
+                            shrinkWrap: true,
                             scrollDirection: Axis.horizontal,
-                            itemCount: 10,
-                            itemBuilder: (context, index) {
+                            itemCount: todos.length,
+                            itemBuilder: (BuildContext context, int index) {
                               return Padding(
                                 padding: const EdgeInsets.only(right: 14),
                                 child: Container(
@@ -133,7 +146,19 @@ class _HomeSCState extends State<HomeSC> {
                                       color: Colors.green[400],
                                       borderRadius: BorderRadius.circular(14)),
                                   child: Center(
-                                    child: Text("$index"),
+                                    child: ListTile(
+                                      title: Text(todos[index]),
+                                      subtitle: Text("Description"),
+                                      trailing: IconButton(
+                                        icon: const Icon(Icons.delete),
+                                        color: Colors.red,
+                                        onPressed: () {
+                                          setState(() {
+                                            todos.removeAt(index);
+                                          });
+                                        },
+                                      ),
+                                    ),
                                   ),
                                 ),
                               );
