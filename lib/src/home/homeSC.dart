@@ -1,7 +1,7 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeSC extends StatefulWidget {
   const HomeSC({Key? key}) : super(key: key);
@@ -20,6 +20,26 @@ class _HomeSCState extends State<HomeSC> {
     super.initState();
     todos = ["Hello", "Hey There"];
   }
+
+  // createTodo() {
+  //   DocumentReference documentReference =
+  //       Firestore.instance.collection("JAMOB todo").document(title);
+
+  //   Map<String, String> todoList = {
+  //     "title": title,
+  //     "description": description,
+  //   };
+
+  //   documentReference.setData(todoList).whenComplete(() {
+  //     print("$title, $description Date stored successfully");
+  //   });
+
+  // Firestore.instance.collection("todos").add({
+  //   "title": title,
+  //   "description": description,
+  //   "completed": false,
+  // });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -126,9 +146,62 @@ class _HomeSCState extends State<HomeSC> {
                               backgroundColor: Colors.blue[100],
                               foregroundColor: Colors.black,
                               child: Text("3"),
-                            )
+                            ),
                           ],
                         ),
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 8,
+                          ),
+                          IconButton(
+                            tooltip: "Add Task",
+                            icon: const Icon(Icons.add),
+                            color: Colors.green,
+                            onPressed: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(16),
+                                      ),
+                                      title: const Text("Add Todo"),
+                                      content: Container(
+                                        width: 400,
+                                        height: 100,
+                                        child: Column(
+                                          children: [
+                                            TextField(
+                                              onChanged: (String value) {
+                                                title = value;
+                                              },
+                                            ),
+                                            TextField(
+                                              onChanged: (String value) {
+                                                description = value;
+                                              },
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      actions: <Widget>[
+                                        TextButton(
+                                            onPressed: () {
+                                              setState(() {
+                                                todos.add(title);
+                                                // createTodo();
+                                              });
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text("Add")),
+                                      ],
+                                    );
+                                  });
+                            },
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 130,
