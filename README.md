@@ -54,4 +54,10 @@ Progress Task 2, Project Management(to do list)
 ![taskManagement](https://user-images.githubusercontent.com/81136629/163229475-64f71ce7-cce8-4ee4-9075-5dfc55795f9a.png)
 
 
+UPDATE Todo --> dengan data dummy sudah bisa Create, read, delete
+
+
+
+
+![UpdateTODO](https://user-images.githubusercontent.com/81136629/163662865-de86bb02-3f1b-4d79-9d50-7e196c3ed76f.png)
 
