@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:internmobile/constant.dart';
 import 'package:internmobile/signin/signinsc.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 // ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Auth Screen',
+      title: 'Intern JAMOB',
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: xPrimaryColor,

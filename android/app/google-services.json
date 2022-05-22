@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1032960993772",
+    "project_id": "internjamob",
+    "storage_bucket": "internjamob.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032960993772:android:158153803a42d0e56bf8c9",
+        "android_client_info": {
+          "package_name": "com.example.internmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032960993772-ee487vd2hg4r5it0ghrhmc36g5nrtgqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRODOoZ2gBuxjYsKlMjHA20cY2ww7bYHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032960993772-ee487vd2hg4r5it0ghrhmc36g5nrtgqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
