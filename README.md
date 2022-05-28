@@ -8,5 +8,5 @@ Project Sub Divisi Intern Jatis Mobile, aplikasi mobile yang berisikan Todo List
 
 ## How To Start
 
-Download Zip this files, than go to terminal with ur Code program editor, run Flutter clean, Flutter pub get.
+Download Zip this files, than go to the terminal with ur Code program editor, run Flutter clean, Flutter pub get.
 if some error detected maybe different version installitaion, run terminal flutter doctor -v
