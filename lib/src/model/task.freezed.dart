@@ -177,7 +177,7 @@ class _$_Task with DiagnosticableTreeMixin implements _Task {
       this.dueDateTime,
       this.description,
       this.imageUrl,
-      this.taskTags = const [],
+      final List<TaskTag>? taskTags = const [],
       this.taskRelate})
       : _taskTags = taskTags;
 
@@ -193,9 +193,12 @@ class _$_Task with DiagnosticableTreeMixin implements _Task {
   @override
   final String? imageUrl;
   final List<TaskTag>? _taskTags;
-  @JsonKey(defaultValue: const [])
   @override
-  final List<TaskTag>? taskTags;
+  @JsonKey()
+  List<TaskTag>? get taskTags {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_taskTags!);
+  }
 
   @override
   final TaskRelate? taskRelate;

@@ -1,6 +1,10 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
 part of 'task_tag.dart';
 
+// **************************************************************************
 // JsonSerializableGenerator
+// **************************************************************************
 
 _$_TaskTag _$$_TaskTagFromJson(Map<String, dynamic> json) => _$_TaskTag(
       tag: json['tag'] as String?,

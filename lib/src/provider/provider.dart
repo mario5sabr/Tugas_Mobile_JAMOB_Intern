@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:internmobile/src/page/chat.dart';
 
 import '../page/homeSC.dart';
 import '../page/tambahTodo.dart';
@@ -16,6 +17,7 @@ class _ProviderBarState extends State<ProviderBar> {
   var pages = [
     HomeSC(),
     TambahTodo(),
+    ChatTxt(),
   ];
   var myIndex = 0;
   @override
